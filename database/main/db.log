@@ -1,0 +1,10 @@
+/*C12*/SET SCHEMA PUBLIC
+DELETE FROM NOTE WHERE ID=6
+INSERT INTO NOTE VALUES(6,'Como fazer testes unit\u00e1rios para o android','Aprender o quanto antes')
+COMMIT
+DELETE FROM NOTE WHERE ID=5
+INSERT INTO NOTE VALUES(5,'Como fazer testes unit\u00e1rios para o android','Aprender o quanto antes')
+COMMIT
+DELETE FROM NOTE WHERE ID=5
+INSERT INTO NOTE VALUES(5,'Como implementar uma API Restfull com Kotlin e SpringBoot','Aprendendo API Rest')
+COMMIT

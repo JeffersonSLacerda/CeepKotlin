@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:file:database/main/db
+    name: sa
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.HSQLDialect
+    hibernate:
+      ddl-auto: update
