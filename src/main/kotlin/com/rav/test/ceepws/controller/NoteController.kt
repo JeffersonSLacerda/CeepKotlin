@@ -4,6 +4,7 @@ import com.rav.test.ceepws.model.Note
 import com.rav.test.ceepws.repository.NoteRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
+import java.util.*
 
 @RestController
 @RequestMapping("notes")
@@ -15,6 +16,11 @@ class NoteController {
     @GetMapping
     fun list(): List<Note>{
         return noteRepository.findAll().toList()
+    }
+
+    @GetMapping("{id}")
+    fun show(@PathVariable id: Long): Optional<Note> {
+        return noteRepository.findById(id)
     }
 
     @PostMapping
